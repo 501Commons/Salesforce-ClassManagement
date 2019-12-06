@@ -116,7 +116,6 @@
             <operator>equals</operator>
             <value>seattle</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>PREPARE billing</name>

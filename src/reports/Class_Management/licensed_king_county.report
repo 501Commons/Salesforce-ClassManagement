@@ -16,7 +16,6 @@
             <operator>equals</operator>
             <value>1</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>licensed king county</name>

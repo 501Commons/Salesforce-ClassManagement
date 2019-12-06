@@ -67,7 +67,6 @@
             <operator>equals</operator>
             <value>Contact.Contact</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>Substitute Outreach</name>

@@ -68,7 +68,6 @@
             <operator>equals</operator>
             <value>washington state,private</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>TA billing info</name>

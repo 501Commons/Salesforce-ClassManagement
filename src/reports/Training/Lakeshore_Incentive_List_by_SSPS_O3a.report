@@ -113,7 +113,6 @@
             <operator>equals</operator>
             <value>Licensed</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>Lakeshore Incentive List by SSPS</name>

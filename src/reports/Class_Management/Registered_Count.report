@@ -37,7 +37,6 @@
             <operator>contains</operator>
             <value>ffn</value>
         </criteriaItems>
-        
     </filter>
     <format>Summary</format>
     <groupingsDown>

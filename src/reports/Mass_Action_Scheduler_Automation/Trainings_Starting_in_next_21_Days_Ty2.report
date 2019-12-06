@@ -38,7 +38,6 @@
             <operator>notEqual</operator>
             <value></value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>Trainings For Outreach</name>

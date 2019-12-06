@@ -51,7 +51,6 @@
             <operator>notContain</operator>
             <value>train</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>Unique Counts-registered</name>

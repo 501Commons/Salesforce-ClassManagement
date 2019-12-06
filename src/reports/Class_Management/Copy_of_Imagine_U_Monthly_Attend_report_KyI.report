@@ -122,7 +122,6 @@
             <operator>equals</operator>
             <value>Imagine U</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>MK Copy Imagine U Monthly Attend report</name>

@@ -67,7 +67,6 @@
             <operator>equals</operator>
             <value>Contact.Facility</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>Facility Orientation Outreach</name>

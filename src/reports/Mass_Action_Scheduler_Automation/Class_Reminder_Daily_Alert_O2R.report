@@ -66,7 +66,6 @@
             <operator>equals</operator>
             <value>0</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>Class Reminder Daily Alert</name>

@@ -128,7 +128,6 @@
             <operator>notContain</operator>
             <value>Orientation</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>Contact and attended</name>

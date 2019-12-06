@@ -79,7 +79,6 @@
             <operator>equals</operator>
             <value>KING</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>All In Unit LFCCP</name>

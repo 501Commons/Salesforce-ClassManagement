@@ -53,7 +53,6 @@
             <operator>contains</operator>
             <value>trainfundamentals</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>Pre-populated sign in sheet info</name>

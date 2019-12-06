@@ -20,7 +20,6 @@
             <operator>contains</operator>
             <value>licensed</value>
         </criteriaItems>
-        
     </filter>
     <format>Summary</format>
     <groupingsDown>

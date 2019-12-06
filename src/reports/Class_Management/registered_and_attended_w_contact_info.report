@@ -40,7 +40,6 @@
             <operator>equals</operator>
             <value>1</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>registered and attended w/ contact info</name>

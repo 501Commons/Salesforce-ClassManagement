@@ -97,7 +97,6 @@
             <operator>equals</operator>
             <value>Somali</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>Imagine U monthly TA</name>

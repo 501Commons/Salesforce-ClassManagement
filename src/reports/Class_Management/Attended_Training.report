@@ -98,7 +98,6 @@
             <operator>lessOrEqual</operator>
             <value>6/30/2019 12:00 AM</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>Attended Training</name>

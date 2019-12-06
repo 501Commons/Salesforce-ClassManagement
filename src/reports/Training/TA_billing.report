@@ -128,7 +128,6 @@
             <operator>contains</operator>
             <value>tri</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>TA billing</name>

@@ -103,7 +103,6 @@
             <operator>contains</operator>
             <value>tukwila</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>Member status</name>

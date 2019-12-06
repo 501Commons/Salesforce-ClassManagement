@@ -42,7 +42,6 @@
             <operator>equals</operator>
             <value>washington state</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>Unique counts in training</name>

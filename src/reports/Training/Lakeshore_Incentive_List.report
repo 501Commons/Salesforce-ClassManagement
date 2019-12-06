@@ -116,7 +116,6 @@
             <operator>contains</operator>
             <value>tukwila</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>Lakeshore Incentive List</name>

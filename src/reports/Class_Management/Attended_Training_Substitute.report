@@ -73,7 +73,6 @@
             <operator>equals</operator>
             <value>Attended</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>Attended Training Substitute</name>

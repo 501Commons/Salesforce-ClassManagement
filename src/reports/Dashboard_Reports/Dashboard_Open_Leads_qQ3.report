@@ -34,7 +34,6 @@
             <operator>equals</operator>
             <value>0</value>
         </criteriaItems>
-        
     </filter>
     <format>Summary</format>
     <groupingsDown>

@@ -64,7 +64,6 @@
             <operator>equals</operator>
             <value>Contact.Contact</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>Monthly Substitute Training</name>

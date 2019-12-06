@@ -43,7 +43,6 @@
             <operator>contains</operator>
             <value>electronic</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>EAS Attendance by Training</name>

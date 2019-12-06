@@ -400,7 +400,7 @@
         <name>Report</name>
     </types>
     <types>
-        <members>Activities</members>
+        <members>Class_Activities</members>
         <members>Class_Contacts</members>
         <members>Class_Contacts_And_CampaignHistory</members>
         <name>ReportType</name>

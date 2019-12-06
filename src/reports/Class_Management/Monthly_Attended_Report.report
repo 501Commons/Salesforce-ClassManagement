@@ -44,7 +44,6 @@
             <operator>equals</operator>
             <value>Attended</value>
         </criteriaItems>
-        
     </filter>
     <format>Summary</format>
     <name>Monthly Attended Report</name>

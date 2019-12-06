@@ -46,7 +46,6 @@
             <operator>equals</operator>
             <value>1</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>Copy of All FFN</name>

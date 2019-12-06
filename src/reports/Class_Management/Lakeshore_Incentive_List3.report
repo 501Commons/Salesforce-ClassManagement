@@ -120,9 +120,8 @@
             <column>Contact.npe01__Preferred_Email__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>,Personal,Work,Alternate,Imagine</value>
+            <value>,Personal,Work,Alternate</value>
         </criteriaItems>
-        
     </filter>
     <format>Tabular</format>
     <name>Imagine U Monthly Attend report</name>
