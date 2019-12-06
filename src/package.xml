@@ -8,6 +8,7 @@
     </types>
     <types>
         <members>Account.C501_Imagine_WA_County__c</members>
+        <members>Account.ii_Email__c</members>
         <members>CCA_Region__c.County__c</members>
         <members>Campaign.C501_Outreach_WA_Counties__c</members>
         <members>Campaign.C501_Registration_Link__c</members>
@@ -283,6 +284,7 @@
         <members>Account-Organization Lightning Layout</members>
         <members>Contact-Contact Lightning Layout</members>
         <members>Contact-Facility Lightning Layout</members>
+        <members>C501_Guest_Update__c-Guest Update Layout</members>
         <members>ii_Program_Membership__c-Intern Mentor Program Membership Layout</members>
         <members>ii_Program_Membership__c-Mentor Program Membership Layout</members>
         <members>ii_Program_Membership__c-PREPARE Program Membership Layout</members>

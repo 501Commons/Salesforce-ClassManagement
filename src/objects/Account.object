@@ -13,6 +13,16 @@
             <valueSetName>C501_WA_Counties</valueSetName>
         </valueSet>
     </fields>
+    <fields>
+            <fullName>ii_Email__c</fullName>
+            <externalId>false</externalId>
+            <label>Email</label>
+            <required>false</required>
+            <trackFeedHistory>false</trackFeedHistory>
+            <trackHistory>false</trackHistory>
+            <type>Email</type>
+            <unique>false</unique>
+    </fields>
     <recordTypes>
         <fullName>Training_Facility</fullName>
         <active>true</active>
