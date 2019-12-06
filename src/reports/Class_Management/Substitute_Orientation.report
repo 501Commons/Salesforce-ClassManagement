@@ -52,7 +52,7 @@
         <name>co</name>
         <value>1</value>
     </params>
-    <reportType>custom_Contacts_and_CampaignHistory__c</reportType>
+    <reportType>Class_Contacts_And_CampaignHistory__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>

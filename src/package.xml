@@ -7,16 +7,12 @@
         <name>CompactLayout</name>
     </types>
     <types>
-        <members>C501_Guest_Update__c.All</members>
-        <name>ListView</name>
-    </types>
-    <types>
+        <members>Account.C501_Imagine_WA_County__c</members>
+        <members>Account.ii_Email__c</members>
         <members>C501_Guest_Update__c.C501_Contact__c</members>
         <members>C501_Guest_Update__c.C501_Email_Opt_Out_Text__c</members>
         <members>C501_Guest_Update__c.C501_SMS_Opt_Out_Text__c</members>
         <members>C501_Guest_Update__c.Languages__c</members>
-        <members>Account.C501_Imagine_WA_County__c</members>
-        <members>Account.ii_Email__c</members>
         <members>CCA_Region__c.County__c</members>
         <members>Campaign.C501_Geolocation__c</members>
         <members>Campaign.C501_Get_Geolocation__c</members>
@@ -216,10 +212,6 @@
         <name>CustomField</name>
     </types>
     <types>
-        <members>C501_Guest_Update__c</members>
-        <name>CustomTab</name>
-    </types>
-    <types>
         <members>C501_Class_Notification__c</members>
         <members>C501_Guest_Update__c</members>
         <members>C501_ScheduledFlow__c</members>
@@ -232,6 +224,10 @@
         <members>npe5__Affiliation__c</members>
         <members>npsp__DataImport__c</members>
         <name>CustomObject</name>
+    </types>
+    <types>
+        <members>C501_Guest_Update__c</members>
+        <name>CustomTab</name>
     </types>
     <types>
         <members>Class_Management</members>
@@ -327,6 +323,10 @@
         <name>Letterhead</name>
     </types>
     <types>
+        <members>C501_Guest_Update__c.All</members>
+        <name>ListView</name>
+    </types>
+    <types>
         <members>Account.Training_Facility</members>
         <members>Campaign.Default</members>
         <members>Contact.Contact</members>
@@ -337,10 +337,6 @@
         <name>RecordType</name>
     </types>
     <types>
-        <members>Dashboard_Reports</members>
-        <members>Dashboard_Reports/Activity_Report_By_Day_MBT</members>
-        <members>Dashboard_Reports/Dashboard_Activity_Report_ESA</members>
-        <members>Dashboard_Reports/Dashboard_Open_Leads_qQ3</members>
         <members>Class_Management</members>
         <members>Class_Management/Attendance_Planned</members>
         <members>Class_Management/Attendance_by_Training_Attended</members>
@@ -369,6 +365,10 @@
         <members>Class_Management/Training_Search</members>
         <members>Class_Management/licensed_king_county</members>
         <members>Class_Management/registered_and_attended_w_contact_info</members>
+        <members>Dashboard_Reports</members>
+        <members>Dashboard_Reports/Activity_Report_By_Day_MBT</members>
+        <members>Dashboard_Reports/Dashboard_Activity_Report_ESA</members>
+        <members>Dashboard_Reports/Dashboard_Open_Leads_qQ3</members>
         <members>Mass_Action_Scheduler_Automation</members>
         <members>Mass_Action_Scheduler_Automation/Class_Reminder_Daily_Alert_O2R</members>
         <members>Mass_Action_Scheduler_Automation/FFN_Training_Outreach_W3x</members>
@@ -401,7 +401,9 @@
         <name>Report</name>
     </types>
     <types>
-        <members>custom_Contacts_and_CampaignHistory</members>
+        <members>Activities</members>
+        <members>Class_Contacts</members>
+        <members>Class_Contacts_And_CampaignHistory</members>
         <name>ReportType</name>
     </types>
     <types>

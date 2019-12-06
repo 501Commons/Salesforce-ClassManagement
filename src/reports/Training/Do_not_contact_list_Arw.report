@@ -139,9 +139,6 @@
         <field>Contact$LastCUUpdateDate</field>
     </columns>
     <columns>
-        <field>Contact$GW_Volunteers__Last_Volunteer_Date__c</field>
-    </columns>
-    <columns>
         <field>Contact$LeadSource</field>
     </columns>
     <columns>
@@ -445,7 +442,7 @@
         <name>co</name>
         <value>1</value>
     </params>
-    <reportType>CRT_Contacts__c</reportType>
+    <reportType>Class_Contacts__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
