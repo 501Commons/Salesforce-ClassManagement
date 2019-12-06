@@ -28,6 +28,44 @@
         <visibleLines>25</visibleLines>
     </fields>
     <fields>
+        <fullName>C501_Clean_Both_Mobile_Numbers__c</fullName>
+        <description>Both Cleaned Numbers to compare to input in Flow to lookup Contacts for communication preferences.</description>
+        <externalId>false</externalId>
+        <formula>C501_Clean_Mobile_Phone__c  +  &apos; &apos;  +  C501_Clean_Imagine_Mobile_Phone__c</formula>
+        <label>Clean Both Mobile Numbers</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_Clean_Imagine_Mobile_Phone__c</fullName>
+        <externalId>false</externalId>
+        <formula>SUBSTITUTE( 
+SUBSTITUTE( 
+SUBSTITUTE( 
+SUBSTITUTE(  Imagine_Mobile_Phone__c  , &quot;(&quot;, &quot;&quot;), &quot;)&quot;, &quot;&quot;), &quot; &quot;, &quot;&quot;), &quot;-&quot;, &quot;&quot;)</formula>
+        <label>Clean Imagine Mobile Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_Clean_Mobile_Phone__c</fullName>
+        <description>clean phone number to match for Twilio.</description>
+        <externalId>false</externalId>
+        <formula>SUBSTITUTE( 
+SUBSTITUTE( 
+SUBSTITUTE( 
+SUBSTITUTE( MobilePhone , &quot;(&quot;, &quot;&quot;), &quot;)&quot;, &quot;&quot;), &quot; &quot;, &quot;&quot;), &quot;-&quot;, &quot;&quot;)</formula>
+        <label>Clean Mobile Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>C501_Cpr_Cert_Days_Remaining__c</fullName>
         <externalId>false</externalId>
         <formula>ii_Cpr_Cert_Date__c - NOW()</formula>
@@ -109,6 +147,16 @@
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Email_Opt_Out_by_Contact_Date__c</fullName>
+        <description>Date stamp of when the contact opted out of email. Populated by the public flow.</description>
+        <externalId>false</externalId>
+        <label>Email Opt Out by Contact Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
     </fields>
     <fields>
         <fullName>C501_FFN_Type__c</fullName>
@@ -216,6 +264,16 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>C501_Record_Type_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>RecordType.Name</formula>
+        <label>Record Type Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>C501_Relative__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -223,6 +281,25 @@
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_SMS_Opt_Out__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>SMS Opt Out</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_SMS_Out_Out_by_Contact_Date__c</fullName>
+        <description>Date stamp of when the contact opted out of SMS. Populated when the public flow is completed by user.</description>
+        <externalId>false</externalId>
+        <label>SMS Out Out by Contact Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
     </fields>
     <fields>
         <fullName>C501_Safe_Sleep_Cert_Remaining_Days__c</fullName>
@@ -786,6 +863,15 @@ User Id for Substitute Pool</inlineHelpText>
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>ii_Mentor_Program__c</fullName>
+        <externalId>false</externalId>
+        <label>Mentor Program</label>
+        <summaryForeignKey>ii_Program_Membership__c.Member__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
         <fullName>ii_Not_Approved_Reasons__c</fullName>
         <externalId>false</externalId>
         <label>Not Approved Reasons</label>
@@ -933,6 +1019,19 @@ User Id for Substitute Pool</inlineHelpText>
         </valueSet>
     </fields>
     <fields>
+        <fullName>ii_SSPS_Number_Matching__c</fullName>
+        <description>SSPS Number Matching is used to cross reference contacts between programs.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>SSPS Number Matching is used to cross reference contacts between programs.</inlineHelpText>
+        <label>SSPS# Matching</label>
+        <length>32</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>ii_SSPS_Number__c</fullName>
         <caseSensitive>false</caseSensitive>
         <description>SSPS # is the unique Id for tracking Contact - Training and FFNs (value managed by Training and FFN Import Process).  Merit uses SSPS#, Unionware uses Provider Number</description>
@@ -974,105 +1073,6 @@ User Id for Substitute Pool</inlineHelpText>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>C501_Clean_Both_Mobile_Numbers__c</fullName>
-        <description>Both Cleaned Numbers to compare to input in Flow to lookup Contacts for communication preferences.</description>
-        <externalId>false</externalId>
-        <formula>C501_Clean_Mobile_Phone__c  +  &apos; &apos;  +  C501_Clean_Imagine_Mobile_Phone__c</formula>
-        <label>Clean Both Mobile Numbers</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>C501_Clean_Imagine_Mobile_Phone__c</fullName>
-        <externalId>false</externalId>
-        <formula>SUBSTITUTE( 
-SUBSTITUTE( 
-SUBSTITUTE( 
-SUBSTITUTE(  Imagine_Mobile_Phone__c  , &quot;(&quot;, &quot;&quot;), &quot;)&quot;, &quot;&quot;), &quot; &quot;, &quot;&quot;), &quot;-&quot;, &quot;&quot;)</formula>
-        <label>Clean Imagine Mobile Phone</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>C501_Clean_Mobile_Phone__c</fullName>
-        <description>clean phone number to match for Twilio.</description>
-        <externalId>false</externalId>
-        <formula>SUBSTITUTE( 
-SUBSTITUTE( 
-SUBSTITUTE( 
-SUBSTITUTE( MobilePhone , &quot;(&quot;, &quot;&quot;), &quot;)&quot;, &quot;&quot;), &quot; &quot;, &quot;&quot;), &quot;-&quot;, &quot;&quot;)</formula>
-        <label>Clean Mobile Phone</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>C501_Record_Type_Name__c</fullName>
-        <externalId>false</externalId>
-        <formula>RecordType.Name</formula>
-        <label>Record Type Name</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>C501_Email_Opt_Out_by_Contact_Date__c</fullName>
-        <description>Date stamp of when the contact opted out of email. Populated by the public flow.</description>
-        <externalId>false</externalId>
-        <label>Email Opt Out by Contact Date</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Date</type>
-    </fields>
-    <fields>
-        <fullName>C501_SMS_Out_Out_by_Contact_Date__c</fullName>
-        <description>Date stamp of when the contact opted out of SMS. Populated when the public flow is completed by user.</description>
-        <externalId>false</externalId>
-        <label>SMS Out Out by Contact Date</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Date</type>
-    </fields>
-    <fields>
-        <fullName>C501_SMS_Opt_Out__c</fullName>
-        <defaultValue>true</defaultValue>
-        <externalId>false</externalId>
-        <label>SMS Opt Out</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>true</trackHistory>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>ii_Mentor_Program__c</fullName>
-        <externalId>false</externalId>
-        <label>Mentor Program</label>
-        <summaryForeignKey>ii_Program_Membership__c.Member__c</summaryForeignKey>
-        <summaryOperation>count</summaryOperation>
-        <trackHistory>false</trackHistory>
-        <type>Summary</type>
-    </fields>
-    <fields>
-        <fullName>ii_SSPS_Number_Matching__c</fullName>
-        <description>SSPS Number Matching is used to cross reference contacts between programs.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>SSPS Number Matching is used to cross reference contacts between programs.</inlineHelpText>
-        <label>SSPS# Matching</label>
-        <length>32</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Text</type>
-        <unique>false</unique>
     </fields>
     <fields>
         <fullName>ii_Stars_Id_Matching__c</fullName>
@@ -1288,6 +1288,165 @@ SUBSTITUTE( MobilePhone , &quot;(&quot;, &quot;&quot;), &quot;)&quot;, &quot;&qu
             </values>
             <values>
                 <fullName>FFN-New</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>C501_Imagine_WA_County__c</picklist>
+            <values>
+                <fullName>Adams</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Asotin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benton</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chelan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clallam</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clark</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Columbia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cowlitz</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Douglas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ferry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Franklin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Garfield</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grays Harbor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Island</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jefferson</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>King</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kitsap</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kittitas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Klickitat</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lewis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lincoln</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mason</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Okanogan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pacific</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pend Oreille</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pierce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>San Juan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Skagit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Skamania</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Snohomish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spokane</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stevens</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Thurston</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wahkiakum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Walla Walla</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Whatcom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Whitman</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yakima</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -2365,6 +2524,165 @@ SUBSTITUTE( MobilePhone , &quot;(&quot;, &quot;&quot;), &quot;)&quot;, &quot;&qu
             </values>
             <values>
                 <fullName>FFN-New</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>C501_Imagine_WA_County__c</picklist>
+            <values>
+                <fullName>Adams</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Asotin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benton</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chelan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clallam</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clark</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Columbia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cowlitz</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Douglas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ferry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Franklin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Garfield</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grays Harbor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Island</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jefferson</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>King</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kitsap</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kittitas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Klickitat</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lewis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lincoln</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mason</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Okanogan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pacific</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pend Oreille</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pierce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>San Juan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Skagit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Skamania</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Snohomish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spokane</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stevens</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Thurston</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wahkiakum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Walla Walla</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Whatcom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Whitman</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yakima</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

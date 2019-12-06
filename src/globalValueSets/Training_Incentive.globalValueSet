@@ -51,5 +51,5 @@
         <label>$750</label>
     </customValue>
     <masterLabel>Incentive</masterLabel>
-    <sorted>true</sorted>
+    <sorted>false</sorted>
 </GlobalValueSet>

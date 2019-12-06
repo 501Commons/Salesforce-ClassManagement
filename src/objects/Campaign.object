@@ -11,27 +11,17 @@
         <label>NPSP Compact Layout</label>
     </compactLayouts>
     <fields>
-            <fullName>C501_Outreach_WA_Counties__c</fullName>
-            <externalId>false</externalId>
-            <inlineHelpText>To which counties should outreach communications be targeted?</inlineHelpText>
-            <label>Outreach WA Counties</label>
-            <required>false</required>
-            <type>MultiselectPicklist</type>
-            <valueSet>
-                <restricted>true</restricted>
-                <valueSetName>C501_WA_Counties</valueSetName>
-            </valueSet>
-            <visibleLines>4</visibleLines>
-    </fields>
-    <fields>
-            <fullName>C501_Trigger_Event_Update__c</fullName>
-            <externalId>false</externalId>
-            <inlineHelpText>Update this field to push Training (Campaign) changes to its respective Event record</inlineHelpText>
-            <label>Trigger Event Update</label>
-            <length>100</length>
-            <required>false</required>
-            <type>Text</type>
-            <unique>false</unique>
+        <fullName>C501_Outreach_WA_Counties__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>To which counties should outreach communications be targeted?</inlineHelpText>
+        <label>Outreach WA Counties</label>
+        <required>false</required>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>C501_WA_Counties</valueSetName>
+        </valueSet>
+        <visibleLines>4</visibleLines>
     </fields>
     <fields>
         <fullName>C501_Registration_Link__c</fullName>
@@ -94,6 +84,16 @@ IF(ISBLANK( C501_Training_Location__r.BillingCity),&quot;&quot;,BR() &amp; C501_
         <relationshipName>Trainings</relationshipName>
         <required>false</required>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>C501_Trigger_Event_Update__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Update this field to push Training (Campaign) changes to its respective Event record</inlineHelpText>
+        <label>Trigger Event Update</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>City__c</fullName>
@@ -356,6 +356,165 @@ IF(ISBLANK( C501_Training_Location__r.BillingCity),&quot;&quot;,BR() &amp; C501_
         <active>true</active>
         <compactLayoutAssignment>NPSP_Compact_Layout</compactLayoutAssignment>
         <label>Default</label>
+        <picklistValues>
+            <picklist>C501_Outreach_WA_Counties__c</picklist>
+            <values>
+                <fullName>Adams</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Asotin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Benton</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chelan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clallam</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clark</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Columbia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cowlitz</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Douglas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ferry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Franklin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Garfield</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grays Harbor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Island</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jefferson</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>King</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kitsap</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kittitas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Klickitat</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lewis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lincoln</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mason</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Okanogan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pacific</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pend Oreille</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pierce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>San Juan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Skagit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Skamania</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Snohomish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spokane</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stevens</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Thurston</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wahkiakum</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Walla Walla</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Whatcom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Whitman</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yakima</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
         <picklistValues>
             <picklist>Class_Type__c</picklist>
             <values>
