@@ -337,6 +337,74 @@
         <name>RecordType</name>
     </types>
     <types>
+        <members>Dashboard_Reports</members>
+        <members>Dashboard_Reports/Activity_Report_By_Day_MBT</members>
+        <members>Dashboard_Reports/Dashboard_Activity_Report_ESA</members>
+        <members>Dashboard_Reports/Dashboard_Open_Leads_qQ3</members>
+        <members>Class_Management</members>
+        <members>Class_Management/Attendance_Planned</members>
+        <members>Class_Management/Attendance_by_Training_Attended</members>
+        <members>Class_Management/Attended_Training</members>
+        <members>Class_Management/Attended_Training_Substitute</members>
+        <members>Class_Management/Copy_of_Imagine_U_Monthly_Attend_report_KyI</members>
+        <members>Class_Management/EAS_Attendance_by_Training_TKj</members>
+        <members>Class_Management/FFN_history</members>
+        <members>Class_Management/FY18_Status_Registered_Attended</members>
+        <members>Class_Management/Imagine_U_Attendance</members>
+        <members>Class_Management/Interns_scheduled</members>
+        <members>Class_Management/Lakeshore_Incentive_List1</members>
+        <members>Class_Management/Lakeshore_Incentive_List3</members>
+        <members>Class_Management/Licensed_Seattle_WAG</members>
+        <members>Class_Management/Licensed_Training_Resend_Registration</members>
+        <members>Class_Management/Member_status</members>
+        <members>Class_Management/Member_status1</members>
+        <members>Class_Management/Mentor_and_Intern_Summary_f7V</members>
+        <members>Class_Management/Monthly_Attended_Report</members>
+        <members>Class_Management/Monthly_Substitute_Training</members>
+        <members>Class_Management/Prepopulated_sign_in_sheet_info_BRp</members>
+        <members>Class_Management/Registered_Count</members>
+        <members>Class_Management/Registered_Report</members>
+        <members>Class_Management/Substitute_Orientation</members>
+        <members>Class_Management/TA_billing_info</members>
+        <members>Class_Management/Training_Search</members>
+        <members>Class_Management/licensed_king_county</members>
+        <members>Class_Management/registered_and_attended_w_contact_info</members>
+        <members>Mass_Action_Scheduler_Automation</members>
+        <members>Mass_Action_Scheduler_Automation/Class_Reminder_Daily_Alert_O2R</members>
+        <members>Mass_Action_Scheduler_Automation/FFN_Training_Outreach_W3x</members>
+        <members>Mass_Action_Scheduler_Automation/Facility_Orientation_Outreach_jen</members>
+        <members>Mass_Action_Scheduler_Automation/LFCCP_Training_Outreach_9SR</members>
+        <members>Mass_Action_Scheduler_Automation/Mass_Action_Class_Registered_Daily_Alert_zGQ</members>
+        <members>Mass_Action_Scheduler_Automation/New_Contacts_Report_KCi11</members>
+        <members>Mass_Action_Scheduler_Automation/New_Contacts_Report_KCi1112</members>
+        <members>Mass_Action_Scheduler_Automation/Substitute_Cert_Expiring_Daily_Alert_2_slh</members>
+        <members>Mass_Action_Scheduler_Automation/Substitute_Orientation_Outreach_XbV</members>
+        <members>Mass_Action_Scheduler_Automation/Survey_Email_to_Attended_Contacts_VZj</members>
+        <members>Mass_Action_Scheduler_Automation/Trainings_Starting_in_next_21_Days_Ty2</members>
+        <members>Training</members>
+        <members>Training/All_In_Unit_FFN_0dc</members>
+        <members>Training/All_In_Unit_FFN_iSl</members>
+        <members>Training/All_In_Unit_LFCCP_z02</members>
+        <members>Training/Class_Unique_Counts_b9K</members>
+        <members>Training/Contact_and_attended_bzL</members>
+        <members>Training/Copy_of_All_FFN_uwH</members>
+        <members>Training/Do_not_contact_list_Arw</members>
+        <members>Training/Lakeshore_Incentive_List</members>
+        <members>Training/Lakeshore_Incentive_List_by_SSPS_O3a</members>
+        <members>Training/Miles_traveled_to_trainings_h67</members>
+        <members>Training/PREPARE_billing_xgE</members>
+        <members>Training/SubPool_In_Unit_LFCCP_LTh</members>
+        <members>Training/TA_billing</members>
+        <members>Training/Unique_Counts</members>
+        <members>Training/Unique_Countsregistered_V29</members>
+        <members>Training/Unique_counts_in_training</members>
+        <name>Report</name>
+    </types>
+    <types>
+        <members>custom_Contacts_and_CampaignHistory</members>
+        <name>ReportType</name>
+    </types>
+    <types>
         <members>CampaignMember.Denied_Email_Alert</members>
         <members>CampaignMember.Denied_Email_Alert_ImagineU</members>
         <members>CampaignMember.Denied_Email_Alert_SubPool</members>
