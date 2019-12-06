@@ -24,7 +24,7 @@
         <fullName>C501_Get_Geolocation__c</fullName>
         <description>Link to get Geolocation from Google Geolocate API.</description>
         <externalId>false</externalId>
-        <formula>IF(OR(NOT(ISBLANK( TEXT(Location__c))),NOT(ISBLANK( Location_Other__c ))), HYPERLINK(&quot;https://maps.googleapis.com/maps/api/geocode/json?address=&quot;+TEXT(Location__c)+Location_Other__c+&quot;&amp;key=AIzaSyCuclHFQbLdYBQrj7UEvfHzar8l32HaPD4&quot;, &quot;Get Geolocation from Google&quot; ,&quot;_blank&quot;),&quot;Need Location&quot;)</formula>
+        <formula>IF(OR(NOT(ISBLANK( TEXT(Location__c))),NOT(ISBLANK( Location_Other__c ))), HYPERLINK(&quot;https://maps.googleapis.com/maps/api/geocode/json?address=&quot;+TEXT(Location__c)+Location_Other__c+&quot;&amp;key=<<GOOGLE API KEY>>&quot;, &quot;Get Geolocation from Google&quot; ,&quot;_blank&quot;),&quot;Need Location&quot;)</formula>
         <label>Get Geolocation</label>
         <required>false</required>
         <type>Text</type>
