@@ -7,6 +7,10 @@
         <name>CompactLayout</name>
     </types>
     <types>
+        <members>C501_Guest_Update__c.C501_Contact__c</members>
+        <members>C501_Guest_Update__c.C501_Email_Opt_Out_Text__c</members>
+        <members>C501_Guest_Update__c.C501_SMS_Opt_Out_Text__c</members>
+        <members>C501_Guest_Update__c.Languages__c</members>
         <members>Account.C501_Imagine_WA_County__c</members>
         <members>Account.ii_Email__c</members>
         <members>CCA_Region__c.County__c</members>
@@ -188,6 +192,15 @@
         <members>ii_Program_Membership__c.Participant_Type__c</members>
         <members>ii_Program_Membership__c.Program_Name__c</members>
         <members>ii_Program_Membership__c.State_Approved_Mentor__c</members>
+        <members>npe5__Affiliation__c.Contact_Name__c</members>
+        <members>npsp__DataImport__c.Contact1_Member_ID__c</members>
+        <members>npsp__DataImport__c.Contact1_Middle_Name__c</members>
+        <members>npsp__DataImport__c.Contact1_RecordTypeId__c</members>
+        <members>npsp__DataImport__c.Contact1_ii_Member_Id__c</members>
+        <members>npsp__DataImport__c.Contact1_ii_SSPS_Number__c</members>
+        <members>npsp__DataImport__c.Contact1_ii_Unit_Status__c</members>
+        <members>npsp__DataImport__c.Contact2_Member_ID__c</members>
+        <members>npsp__DataImport__c.Contact2_Middle_Name__c</members>
         <name>CustomField</name>
     </types>
     <types>
@@ -200,6 +213,8 @@
         <members>Imagine_Settings__c</members>
         <members>TwilioConfig__c</members>
         <members>ii_Program_Membership__c</members>
+        <members>npe5__Affiliation__c</members>
+        <members>npsp__DataImport__c</members>
         <name>CustomObject</name>
     </types>
     <types>
@@ -282,9 +297,9 @@
     </types>
     <types>
         <members>Account-Organization Lightning Layout</members>
+        <members>C501_Guest_Update__c-Guest Update Layout</members>
         <members>Contact-Contact Lightning Layout</members>
         <members>Contact-Facility Lightning Layout</members>
-        <members>C501_Guest_Update__c-Guest Update Layout</members>
         <members>ii_Program_Membership__c-Intern Mentor Program Membership Layout</members>
         <members>ii_Program_Membership__c-Mentor Program Membership Layout</members>
         <members>ii_Program_Membership__c-PREPARE Program Membership Layout</members>

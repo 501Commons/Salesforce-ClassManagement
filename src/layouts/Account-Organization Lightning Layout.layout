@@ -157,18 +157,6 @@
         <relatedList>RelatedNoteList</relatedList>
     </relatedLists>
     <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>AM_Campus_User__c.ii_Facility__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>AM_Facility_Bulk__c.ii_Facility__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>AM_Substitue_Bulk__c.ii_Facility__c</relatedList>
-    </relatedLists>
-    <relatedLists>
         <fields>CAMPAIGN.NAME</fields>
         <fields>CAMPAIGN.STATUS</fields>
         <fields>CAMPAIGN.START_DATE</fields>
