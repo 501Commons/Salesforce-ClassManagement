@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Cert_Admin_Alert</name>
+        <label>Cert Admin Alert</label>
+        <locationX>677</locationX>
+        <locationY>433</locationY>
+        <actionName>Contact.Certification_Expiring_Admin_Alert</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Create_Event_0</targetReference>
+        </connector>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>soContact.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Certiifcation_Alert</name>
+        <label>Certiifcation Alert</label>
+        <locationX>491</locationX>
+        <locationY>432</locationY>
+        <actionName>Contact.Certification_Expiring_Alert</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Check_Is_Expired</targetReference>
+        </connector>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>soContact.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <decisions>
+        <name>Check_Is_Expired</name>
+        <label>Check Is Expired</label>
+        <locationX>482</locationX>
+        <locationY>602</locationY>
+        <defaultConnector>
+            <targetReference>Create_Event</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Expired</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>isExpired</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Event_Expired</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Valid_Contact</name>
+        <label>Valid Contact</label>
+        <locationX>313</locationX>
+        <locationY>299</locationY>
+        <defaultConnectorLabel>[Default Outcome]</defaultConnectorLabel>
+        <rules>
+            <name>Yes_ValidContact</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>soContact.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Valid_Email</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Valid_Email</name>
+        <label>Valid Email</label>
+        <locationX>482</locationX>
+        <locationY>137</locationY>
+        <defaultConnector>
+            <targetReference>Update_Contact_0</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Valid_Email</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>soContact.Email</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>@</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Contact</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>DaveB: Default owner to Training User</description>
+    <formulas>
+        <name>getCprDaysRemaining</name>
+        <dataType>String</dataType>
+        <expression>IF ({!soContact.C501_Cpr_Cert_Days_Remaining__c} &lt;= 0,
+&quot;Expired&quot;, 
+TEXT({!soContact.C501_Cpr_Cert_Days_Remaining__c}) + &quot; Day(s) Remaining&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>getCredsExpiredMessage</name>
+        <dataType>String</dataType>
+        <expression>IF ({!soContact.C501_Cpr_Cert_Days_Remaining__c} = 30 || {!soContact.C501_Cpr_Cert_Days_Remaining__c} = 14 ||  {!soContact.C501_Cpr_Cert_Days_Remaining__c} &lt;= 2,
+&quot;&lt;b&gt;CPR&lt;/b&gt;&lt;ul&gt;&lt;li&gt;Certification &quot; 
+  + TEXT(DATEVALUE({!soContact.ii_Cpr_Cert_Date__c})) + &quot;&lt;/li&gt;&lt;li&gt;Status: &quot; + {!getCprDaysRemaining} + &quot;&lt;/li&gt;&lt;/ul&gt;&quot;,&quot;&quot;)
++
+IF ({!soContact.C501_First_Aid_Cert_Days_Remaining__c} = 30 || {!soContact.C501_First_Aid_Cert_Days_Remaining__c} = 14 ||  {!soContact.C501_First_Aid_Cert_Days_Remaining__c} &lt;= 2,
+&quot;&lt;b&gt;First Aid&lt;/b&gt;&lt;li&gt;&lt;ul&gt;Certification &quot; 
+  + TEXT(DATEVALUE({!soContact.ii_First_Aid_Cert_Date__c})) + &quot;&lt;/li&gt;&lt;li&gt;Status: &quot; + {!getFirstAidDaysRemaining} + &quot;&lt;/li&gt;&lt;li&gt;Update by signing up for a free training on our website @ http://501commons.org/become-a-substitute/&lt;/li&gt;&lt;/ul&gt;&quot;,&quot;&quot;)
++
+IF ({!soContact.C501_PBC_Cert_Remaining_Days__c} = 30 || {!soContact.C501_PBC_Cert_Remaining_Days__c} = 14 ||  {!soContact.C501_PBC_Cert_Remaining_Days__c} &lt;= 2,
+&quot;&lt;b&gt;Portable Background Check (PBC)&lt;/b&gt;&lt;li&gt;&lt;ul&gt;Certification &quot; 
+  + TEXT(DATEVALUE({!soContact.ii_PBC_Expiration__c})) + &quot;&lt;/li&gt;&lt;li&gt;Status: &quot; + {!getPbcRemainingDays} + &quot;&lt;/li&gt;&lt;li&gt;Update in MERIT @ https://apps.del.wa.gov/MERIT&lt;/li&gt;&lt;/ul&gt;&quot;,&quot;&quot;)
++
+IF ({!soContact.C501_Safe_Sleep_Cert_Remaining_Days__c} = 30 || {!soContact.C501_Safe_Sleep_Cert_Remaining_Days__c} = 14 ||  {!soContact.C501_Safe_Sleep_Cert_Remaining_Days__c} &lt;= 2,
+&quot;&lt;b&gt;Infant Safe Sleep&lt;/b&gt;&lt;li&gt;&lt;ul&gt;Certification &quot; 
+  + TEXT(DATEVALUE({!soContact.ii_Safe_Sleep_Cert_Date__c})) + &quot;&lt;/li&gt;&lt;li&gt;Status: &quot; + {!getSafeSleepDaysRemaining} + &quot;&lt;/li&gt;&lt;li&gt;Update @ http://deltraining.com/&lt;/li&gt;&lt;/ul&gt;&quot;,&quot;&quot;)
++
+IF ({!soContact.C501_Food_Handler_Cert_Remaining_Days__c} = 30 || {!soContact.C501_Food_Handler_Cert_Remaining_Days__c} = 14 ||  {!soContact.C501_Food_Handler_Cert_Remaining_Days__c} &lt;= 2,
+&quot;&lt;b&gt;Food Handler&lt;/b&gt;&lt;li&gt;&lt;ul&gt;Certification &quot; 
+  + TEXT(DATEVALUE({!soContact.ii_Food_Handler_Cert_Date__c})) + &quot;&lt;/li&gt;&lt;li&gt;Status: &quot; + {!getFoodHandlerDaysRemaining} + &quot;&lt;/li&gt;&lt;li&gt;Update @ https://www.doh.wa.gov/CommunityandEnvironment/Food/FoodWorkerandIndustry/FoodWorkerCard&lt;/li&gt;&lt;/ul&gt;&quot;,&quot;&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>getFirstAidDaysRemaining</name>
+        <dataType>String</dataType>
+        <expression>IF ({!soContact.C501_First_Aid_Cert_Days_Remaining__c} &lt;= 0,
+&quot;Expired&quot;,
+TEXT({!soContact.C501_First_Aid_Cert_Days_Remaining__c}) + &quot; Day(s) Remaining&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>getFoodHandlerDaysRemaining</name>
+        <dataType>String</dataType>
+        <expression>IF ({!soContact.C501_Food_Handler_Cert_Remaining_Days__c} &lt;= 0,
+&quot;Expired&quot;,
+TEXT({!soContact.C501_Food_Handler_Cert_Remaining_Days__c}) + &quot; Day(s) Remaining&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>getPbcRemainingDays</name>
+        <dataType>String</dataType>
+        <expression>IF ({!soContact.C501_PBC_Cert_Remaining_Days__c} &lt;= 0,
+&quot;Expired&quot;,
+TEXT({!soContact.C501_PBC_Cert_Remaining_Days__c}) + &quot; Day(s) Remaining&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>getSafeSleepDaysRemaining</name>
+        <dataType>String</dataType>
+        <expression>IF ({!soContact.C501_Safe_Sleep_Cert_Remaining_Days__c} &lt;= 0,
+&quot;Expired&quot;,
+TEXT({!soContact.C501_Safe_Sleep_Cert_Remaining_Days__c}) + &quot; Day(s) Remaining&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>isExpired</name>
+        <dataType>Boolean</dataType>
+        <expression>({!soContact.C501_Cpr_Cert_Days_Remaining__c} &lt;= 0 ||
+{!soContact.C501_First_Aid_Cert_Days_Remaining__c} &lt;= 0 ||
+{!soContact.C501_PBC_Cert_Remaining_Days__c} &lt;= 0 ||
+{!soContact.C501_Safe_Sleep_Cert_Remaining_Days__c} &lt;= 0 ||
+{!soContact.C501_Food_Handler_Cert_Remaining_Days__c} &lt;= 0)</expression>
+    </formulas>
+    <interviewLabel>Send Certification Alert {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Send Certification Alert</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Event</name>
+        <label>Create Event</label>
+        <locationX>495</locationX>
+        <locationY>780</locationY>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <elementReference>getCredsExpiredMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>EndDateTime</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>0056A000000qgpsQAA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StartDateTime</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>Certification Expiring Email Notification</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Type</field>
+            <value>
+                <stringValue>Email</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>soContact.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhoId</field>
+            <value>
+                <elementReference>soContact.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Event</object>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_Event_0</name>
+        <label>Create Event</label>
+        <locationX>674</locationX>
+        <locationY>579</locationY>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <elementReference>getCredsExpiredMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>EndDateTime</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>0056A000000qgpsQAA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StartDateTime</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>Certification Expiring Phone Call from Admin</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Type</field>
+            <value>
+                <stringValue>Phone</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>soContact.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhoId</field>
+            <value>
+                <elementReference>soContact.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Event</object>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_Event_Expired</name>
+        <label>Create Event Expired</label>
+        <locationX>356</locationX>
+        <locationY>788</locationY>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <elementReference>getCredsExpiredMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>EndDateTime</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>0056A000000qgpsQAA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StartDateTime</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>Certification Expired Email Notification</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Type</field>
+            <value>
+                <stringValue>Email</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>soContact.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhoId</field>
+            <value>
+                <elementReference>soContact.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Event</object>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Contact</name>
+        <label>Get Contact</label>
+        <locationX>205</locationX>
+        <locationY>174</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Valid_Contact</targetReference>
+        </connector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varInputContactId</elementReference>
+            </value>
+        </filters>
+        <object>Contact</object>
+        <outputAssignments>
+            <assignToReference>soContact.AccountId</assignToReference>
+            <field>AccountId</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>soContact.C501_Cpr_Cert_Days_Remaining__c</assignToReference>
+            <field>C501_Cpr_Cert_Days_Remaining__c</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>soContact.C501_First_Aid_Cert_Days_Remaining__c</assignToReference>
+            <field>C501_First_Aid_Cert_Days_Remaining__c</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>soContact.C501_Food_Handler_Cert_Remaining_Days__c</assignToReference>
+            <field>C501_Food_Handler_Cert_Remaining_Days__c</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>soContact.C501_PBC_Cert_Remaining_Days__c</assignToReference>
+            <field>C501_PBC_Cert_Remaining_Days__c</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>soContact.C501_Safe_Sleep_Cert_Remaining_Days__c</assignToReference>
+            <field>C501_Safe_Sleep_Cert_Remaining_Days__c</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>soContact.Email</assignToReference>
+            <field>Email</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>soContact.Id</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>soContact.ii_Cpr_Cert_Date__c</assignToReference>
+            <field>ii_Cpr_Cert_Date__c</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>soContact.ii_First_Aid_Cert_Date__c</assignToReference>
+            <field>ii_First_Aid_Cert_Date__c</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>soContact.ii_Food_Handler_Cert_Date__c</assignToReference>
+            <field>ii_Food_Handler_Cert_Date__c</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>soContact.ii_PBC_Expiration__c</assignToReference>
+            <field>ii_PBC_Expiration__c</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>soContact.ii_Safe_Sleep_Cert_Date__c</assignToReference>
+            <field>ii_Safe_Sleep_Cert_Date__c</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Contact</name>
+        <label>Update Contact</label>
+        <locationX>493</locationX>
+        <locationY>298</locationY>
+        <connector>
+            <targetReference>Certiifcation_Alert</targetReference>
+        </connector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>soContact.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>C501_Certs_Expiring_Message__c</field>
+            <value>
+                <elementReference>getCredsExpiredMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Contact_0</name>
+        <label>Update Contact</label>
+        <locationX>674</locationX>
+        <locationY>303</locationY>
+        <connector>
+            <targetReference>Cert_Admin_Alert</targetReference>
+        </connector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>soContact.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>C501_Certs_Expiring_Message__c</field>
+            <value>
+                <elementReference>getCredsExpiredMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <startElementReference>Get_Contact</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>soContact</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Contact</objectType>
+    </variables>
+    <variables>
+        <name>varInputContactId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>0036A00000cPYqwQAG</stringValue>
+        </value>
+    </variables>
+</Flow>

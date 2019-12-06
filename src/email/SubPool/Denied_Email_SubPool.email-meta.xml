@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email recieved when denied</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Training_Registration</letterhead>
+    <name>Denied Email SubPool</name>
+    <style>freeForm</style>
+    <subject>Class Registration Error</subject>
+    <textOnly>Our records show you do not qualify* for {!CampaignMember.Training_Name__c} on {!CampaignMember.Training_Start_DateTime__c} - {!CampaignMember.Training_End_DateTime__c} with the 501 Commons.
+
+If you feel this is an error please call us at 206-682-6704 or email sfconsulting@501commons.org.
+
+Thank you,
+
+-The 501 Commons
+
+www.501commons.org
+
+* Providers that qualify for The 501 Commons classes must have in their care during the time of training at least one state subsidized child. Only Licensed Family Child Care Providers (LFCCP) and Family, Friends and Neighbor (FFN) providers qualify for our free training classes.
+
+----
+
+
+Nuestros archivos indican que no califica* para {!CampaignMember.Training_Name__c} en {!CampaignMember.Training_Start_DateTime__c} - {!CampaignMember.Training_End_DateTime__c} con El Instituto Imagine.
+
+Si ud cree que es un error favor de comunicarse al 206-682-6704 O por correo electronico sfconsulting@501commons.org.
+
+-El Instituto Imagine
+
+www.501commons.org
+
+*Proveedoras que califican para las clases con el Instituto deben estar ofreciendo cuidado durante el tiempo de capacitacion al menos un niño subsidiado por el estado. Solo proveedoras con Licensia de cuidado de niños (LFCCP), Vecinos, amigos y familiars (FFN) califican para nuestros entrenamientos gratis.
+
+{!$Setup.Imagine_Settings__c.Email_SMS_Unsub_Text__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

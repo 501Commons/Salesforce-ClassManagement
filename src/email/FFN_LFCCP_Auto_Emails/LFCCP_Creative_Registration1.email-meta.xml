@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>LFCCP Creative Registration</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Training_Registration</letterhead>
+    <name>LFCCP Creative Registration1</name>
+    <style>freeForm</style>
+    <subject>You&apos;re registered!</subject>
+    <textOnly>You&apos;re registered! {!CampaignMember.FirstName}, you have successfully registered for {!CampaignMember.Training_Name__c} with the 501 Commons. All eligible participants will receive free The Creative Curriculum® by Teaching Strategies®! When: {!CampaignMember.Training_Start_DateTime__c} - {!CampaignMember.Training_End_DateTime__c} Where: {!CampaignMember.C501_Training_Location_Text__c} Once you have received this email confirmation from the 501 Commons, you are considered registered. Registered participants who give less than 24 hours&apos; notice for cancellation or &quot;no show&quot; will not be eligible to receive a bonus this fiscal year (July 1-June 30). Please let us know if you won&apos;t be able to make it so we can let another provider take the class. Call us at 206-682-6704 or email sfconsulting@501commons.org. See you soon! -The 501 Commons www.501commons.org ¡Está registrado! {!CampaignMember.FirstName}, está registrado para {!CampaignMember.Training_Name__c} con el 501 Commons. Todos los participantes eligibles recibirán gratis The Creative Curriculum® by Teaching Strategies®! Cuando: {!CampaignMember.Training_Start_DateTime__c} - {!CampaignMember.Training_End_DateTime__c} Dirección: {!CampaignMember.C501_Training_Location_Text__c} Una vez que usted reciba esta confirmación electrónica de parte de el Instituto Imagen usted ya se puede considerar registrado. Participantes registrados quienes den menos de 24 horas de notificación para cancelar o “no se presenten” no serán elegidos para recibir más bonos este año fiscal ( Julio 1 - Junio 30). Por favor déjenos saber si usted no podrá asistir, así nosotros podemos darle la oportunidad a otras proveedoras de tomar la clase. ¿Preguntas? Contáctenos al 206-682-6704 o sfconsulting@501commons.org. -The 501 Commons www.501commons.org
+
+{!$Setup.Imagine_Settings__c.Email_SMS_Unsub_Text__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

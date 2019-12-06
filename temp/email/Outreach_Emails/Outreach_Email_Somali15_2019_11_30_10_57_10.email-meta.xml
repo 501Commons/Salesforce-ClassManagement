@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Copy of: Outreach Email (Somali). Only needed temporarily. Will be deleted next time outreach process is run.</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>II_Training_Registration</letterhead>
+    <name>ZZ** Outreach Email (Somali)15 Sent: 2019-11-30T10:57:10</name>
+    <style>freeForm</style>
+    <subject>Upcoming Training In Your Area</subject>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

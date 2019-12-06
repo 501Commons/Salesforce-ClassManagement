@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>FFN Reminder</fullName>
+        <default>true</default>
+        <label>FFN Reminder (English)</label>
+    </customValue>
+    <customValue>
+        <fullName>FFN_Reminder_Spanish</fullName>
+        <default>false</default>
+        <label>FFN Reminder (Spanish)</label>
+    </customValue>
+    <customValue>
+        <fullName>Imagine U Reminder (English)</fullName>
+        <default>false</default>
+        <label>Imagine U Reminder (English)</label>
+    </customValue>
+    <customValue>
+        <fullName>Imagine U Reminder (Spanish)</fullName>
+        <default>false</default>
+        <label>Imagine U Reminder (Spanish)</label>
+    </customValue>
+    <customValue>
+        <fullName>LFCCP_Creative_Reminder1</fullName>
+        <default>false</default>
+        <label>LFCCP Creative Reminder1</label>
+    </customValue>
+    <customValue>
+        <fullName>LFCCPReminder</fullName>
+        <default>false</default>
+        <label>LFCCPReminder</label>
+    </customValue>
+    <customValue>
+        <fullName>LFCCP Reminder Spanish</fullName>
+        <default>false</default>
+        <label>LFCCP Reminder Spanish</label>
+    </customValue>
+    <customValue>
+        <fullName>Substitute Pool Reminder (English)</fullName>
+        <default>false</default>
+        <label>Substitute Pool Reminder (English)</label>
+    </customValue>
+    <customValue>
+        <fullName>Substitute Pool Reminder (Spanish)</fullName>
+        <default>false</default>
+        <label>Substitute Pool Reminder (Spanish)</label>
+    </customValue>
+    <customValue>
+        <fullName>PREPARE_Reminder</fullName>
+        <default>false</default>
+        <label>PREPARE Reminder</label>
+    </customValue>
+    <masterLabel>Email Template Reminder</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

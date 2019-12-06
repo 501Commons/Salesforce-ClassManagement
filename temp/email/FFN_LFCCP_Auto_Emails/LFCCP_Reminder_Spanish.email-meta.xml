@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>LFCCP Reminder Spanish</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>White_Logo_with_Imagine_Blue2</letterhead>
+    <name>LFCCP Reminder Spanish</name>
+    <style>freeForm</style>
+    <subject>¡Su entrenamiento se acerca!</subject>
+    <textOnly>¡Su entrenamiento se acerca!
+{!CampaignMember.FirstName}, {!CampaignMember.Training_Name__c} ya casi está aquí.
+
+Cuando:
+
+{!CampaignMember.Training_Start_DateTime__c} - {!CampaignMember.Training_End_DateTime__c}
+
+Dirección:
+
+{!CampaignMember.C501_Training_Location_Text__c}
+
+Comida será servida: {!CampaignMember.Meal_Provided__c}
+
+
+Si no puede asistir, favor de avisarnos lo mas pronto posible.
+
+
+
+Puede optar por asistir a múltiples capacitaciones, pero recibirá un incentivo por licencia, por año fiscal (1 de julio de 2019 - 30 de junio de 2020). Espere hasta 90 días hábiles a partir del siguiente mes de capacitación para recibir incentivos en efectivo.
+
+
+¿Preguntas? Contáctenos al 206-492-5249 o training@imaginewa.org.
+
+-The Imagine Institute
+
+www.imaginewa.org
+
+
+
+
+Para inscribirse por teléfono, por favor llámenos al 206-492-5249 los lunes, martes, jueves, y viernes.
+
+
+{!$Setup.Imagine_Settings__c.Email_SMS_Unsub_Text__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

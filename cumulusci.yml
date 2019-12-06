@@ -1,0 +1,21 @@
+minimum_cumulusci_version: '3.1.2'
+project:
+    name: Salesforce-ClassManagement
+    package:
+        name:  Salesforce-ClassManagement
+        api_version: '47.0'
+        source_format: sfdx
+    dependencies:
+        - github: https://github.com/SalesforceFoundation/Cumulus
+
+tasks:
+    robot:
+        options:
+            suites: robot/Salesforce-ClassManagement/tests
+            options:
+                outputdir: robot/Salesforce-ClassManagement/results
+
+    robot_testdoc:
+        options:
+            path: robot/Salesforce-ClassManagement/tests
+            output: robot/Salesforce-ClassManagement/doc/Salesforce-ClassManagement_tests.html

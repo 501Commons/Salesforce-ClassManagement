@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>PREPARE Reminder</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Training_Registration</letterhead>
+    <name>PREPARE Reminder</name>
+    <style>freeForm</style>
+    <subject>You&apos;re training is coming up!</subject>
+    <textOnly>Your training is coming up! {!CampaignMember.FirstName}, {!CampaignMember.Training_Name__c} is almost here. Details are below! When: {!CampaignMember.Training_Start_DateTime__c} - {!CampaignMember.Training_End_DateTime__c} Where: {!CampaignMember.C501_Training_Location_Text__c}  Food Provided: {!CampaignMember.Meal_Provided__c} Please let us know if you won&apos;t be able to make it so we can let another provider take the class. Call us at 206-682-6704 or email prepareforcare@501commons.org. See you soon! -The 501 Commons www.501commons.org ¡Su entrenamiento se acerca!{!CampaignMember.FirstName}, {!CampaignMember.Training_Name_c} ya casi está aquí. Cuando: {!CampaignMember.Training_Start_DateTime__c} - {!CampaignMember.Training_End_DateTime__c} Dirección: !CampaignMember.Training_Location__c} Comida provista: {!CampaignMember.Meal_Provided__c} Si no puede asistir, favor de avisarnos tan pronto como posible. ¿Preguntas? Contáctenos al 206-682-6704 o prepareforcare@501commons.org. -The 501 Commons www.501commons.org
+
+{!$Setup.Imagine_Settings__c.Email_SMS_Unsub_Text__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

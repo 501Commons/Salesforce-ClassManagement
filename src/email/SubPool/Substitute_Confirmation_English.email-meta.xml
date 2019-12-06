@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Substitute Confirmation (English)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Training_Registration</letterhead>
+    <name>Substitute Confirmation (English)</name>
+    <style>freeForm</style>
+    <subject>You&apos;re registered!</subject>
+    <textOnly>You&apos;re registered! You have successfully registered for {!CampaignMember.Training_Name__c} with the 501 Commons. Details are below! When: {!CampaignMember.Training_Start_DateTime__c} - {!CampaignMember.Training_End_DateTime__c} Where: {!CampaignMember.C501_Training_Location_Text__c} If this is an online training, please click the above link to complete your registration!! Please let us know if you won&apos;t be able to make it. Call us at 206-682-6704 or email sfconsulting@501commons.org. See you soon! -The 501 Commons www.501commons.org Remember: Bring your MERIT STARS number with you. If you have not signed up for one yet, click here.
+
+{!$Setup.Imagine_Settings__c.Email_SMS_Unsub_Text__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

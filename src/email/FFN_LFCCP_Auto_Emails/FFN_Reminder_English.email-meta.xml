@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>FFN Reminder</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Training_Registration</letterhead>
+    <name>FFN Reminder (English)</name>
+    <style>freeForm</style>
+    <subject>Your training is coming up!</subject>
+    <textOnly>ur training is coming up!
+
+{!CampaignMember.FirstName}, {!CampaignMember.Training_Name__c} is almost here. Details are below!
+
+When: {!CampaignMember.Training_Start_DateTime__c} - {!CampaignMember.Training_End_DateTime__c}
+
+Where: {!CampaignMember.C501_Training_Location_Text__c}
+
+Food Provided: {!CampaignMember.Meal_Provided__c}
+
+Please let us know if you won&apos;t be able to make it so we can let another provider take the class.
+
+Call us at 206-682-6704 or email sfconsulting@501commons.org.
+
+See you soon!
+
+-The 501 Commons
+
+www.501commons.org
+
+Remember: In order to receive your {!CampaignMember.Training_Incentive__c} bonus, you must be within the SEIU 925 bargaining unit and authorized and providing care to a subsidized child in the month the training takes place. You must also have a MERIT STARS number. Please click here to register for your STARS number before class. You must attend both days of the FFN Mandatory training for a $500 bonus or all three days of Child Care Basics training for a $750 bonus. Only one bonus per fiscal year (July 1 – June 30). Only registered participants will be allowed entry.
+
+Substitutes who are not Family, Friend, and Neighbor providers are not eligible for a bonus.
+{!$Setup.Imagine_Settings__c.Email_SMS_Unsub_Text__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Imagine U Reminder (Spanish)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Training_Registration</letterhead>
+    <name>Imagine U Reminder (Spanish)</name>
+    <style>freeForm</style>
+    <subject>¡Su orientación se acerca!</subject>
+    <textOnly>¡Su entrenamiento se acerca!
+
+{!CampaignMember.FirstName}, {!Campaign.Name} ya casi está aquí.
+
+
+
+Cuando: {!CampaignMember.Training_Start_DateTime__c} - {!CampaignMember.Training_End_DateTime__c}
+
+Dirección: {!CampaignMember.C501_Training_Location_Text__c}
+
+
+Comida será servida: {!CampaignMember.Meal_Provided__c}
+
+
+¿Preguntas? Contáctenos al 206-682-6704 o sfconsulting@501commons.org.
+
+-The 501 Commons
+
+www.501commons.org
+
+
+
+{!$Setup.Imagine_Settings__c.Email_SMS_Unsub_Text__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

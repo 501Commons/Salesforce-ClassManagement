@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Substitute Confirmation Spanish</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Training_Registration</letterhead>
+    <name>Substitute Confirmation (Spanish)</name>
+    <style>freeForm</style>
+    <subject>¡Está registrado!</subject>
+    <textOnly>¡Está registrado! Está registrado para {!CampaignMember.Training_Name__c} con el 501 Commons. Cuando: {!CampaignMember.Training_Start_DateTime__c} - {!CampaignMember.Training_End_DateTime__c} Dirección: {!CampaignMember.C501_Training_Location_Text__c} Si no puede asistir, favor de avisarnos tan pronto como posible. ¿Preguntas? Contáctenos al 206-682-6704 o sfconsulting@501commons.org. -The 501 Commons www.501commons.org Recuerden de traer sus numero de STARS con Uds. Si no tiene uno todavia, se puede registrar aqui, https://apps.del.wa.gov/MERIT/Home/SignInRegister.
+
+{!$Setup.Imagine_Settings__c.Email_SMS_Unsub_Text__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

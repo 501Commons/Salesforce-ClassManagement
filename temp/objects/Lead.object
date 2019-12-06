@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Class_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Class Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>custom_ClassType</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Payee_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>SSPS/Payee Number</label>
+        <length>16</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Training_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Training Status</label>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Training_Status</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>custom_Provider_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Provider Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ii_STARS_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>STARS Id</label>
+        <length>16</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>
