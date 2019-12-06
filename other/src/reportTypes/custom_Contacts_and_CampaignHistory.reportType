@@ -1675,11 +1675,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>GW_Volunteers__Volunteer_Website_Time_Zone__c</field>
-            <table>Contact.CampaignMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>GW_Volunteers__Number_of_Volunteers__c</field>
             <table>Contact.CampaignMembers</table>
         </columns>

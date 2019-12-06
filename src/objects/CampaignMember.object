@@ -13,6 +13,17 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>C501_Miles_From__c</fullName>
+        <externalId>false</externalId>
+        <formula>DISTANCE( GEOLOCATION(  Campaign.C501_Training_Location__r.BillingLatitude ,  Campaign.C501_Training_Location__r.BillingLongitude  ), GEOLOCATION(Contact.MailingLatitude, Contact.MailingLongitude ) , &apos;mi&apos;)</formula>
+        <label>Miles From</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>C501_Training_Location_Text__c</fullName>
         <externalId>false</externalId>
         <formula>Campaign.C501_Training_Location_Text__c</formula>
@@ -20,6 +31,14 @@
         <required>false</required>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Opt_Out__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact.HasOptedOutOfEmail</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Email Opt Out</label>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Meal_Provided__c</fullName>

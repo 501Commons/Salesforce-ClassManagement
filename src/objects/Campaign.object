@@ -11,6 +11,44 @@
         <label>NPSP Compact Layout</label>
     </compactLayouts>
     <fields>
+        <fullName>C501_Geolocation__c</fullName>
+        <displayLocationInDecimal>true</displayLocationInDecimal>
+        <externalId>false</externalId>
+        <inlineHelpText>Geolocation for this training event</inlineHelpText>
+        <label>Geolocation</label>
+        <required>false</required>
+        <scale>6</scale>
+        <type>Location</type>
+    </fields>
+    <fields>
+        <fullName>C501_Get_Geolocation__c</fullName>
+        <description>Link to get Geolocation from Google Geolocate API.</description>
+        <externalId>false</externalId>
+        <formula>IF(OR(NOT(ISBLANK( TEXT(Location__c))),NOT(ISBLANK( Location_Other__c ))), HYPERLINK(&quot;https://maps.googleapis.com/maps/api/geocode/json?address=&quot;+TEXT(Location__c)+Location_Other__c+&quot;&amp;key=AIzaSyCuclHFQbLdYBQrj7UEvfHzar8l32HaPD4&quot;, &quot;Get Geolocation from Google&quot; ,&quot;_blank&quot;),&quot;Need Location&quot;)</formula>
+        <label>Get Geolocation</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_Last_Outreach_Processed__c</fullName>
+        <description>Time stamp of last time automated outreach was processed.</description>
+        <externalId>false</externalId>
+        <label>Last Outreach Processed</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>C501_Legacy_Location__c</fullName>
+        <description>Legacy Location information. Created because all admins have Edit Read Only Fields enabled and we need to make these two fields not editable.</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Location__c) + &quot; &quot;+  Location_Other__c</formula>
+        <label>Location (Legacy)</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>C501_Outreach_WA_Counties__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>To which counties should outreach communications be targeted?</inlineHelpText>
@@ -35,6 +73,15 @@
 &quot;PREPARE&quot;,&quot;http://bit.ly/2K2OLoG&quot;,
 &quot;http://bit.ly/2ykRkfl&quot;)</formula>
         <label>C501_Registration Link</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_Training_County__c</fullName>
+        <externalId>false</externalId>
+        <formula>BLANKVALUE( TEXT(C501_Training_Location__r.C501_Imagine_WA_County__c) , &quot;Not Specified&quot;)</formula>
+        <label>Training County</label>
         <required>false</required>
         <type>Text</type>
         <unique>false</unique>
@@ -91,6 +138,27 @@ IF(ISBLANK( C501_Training_Location__r.BillingCity),&quot;&quot;,BR() &amp; C501_
         <inlineHelpText>Update this field to push Training (Campaign) changes to its respective Event record</inlineHelpText>
         <label>Trigger Event Update</label>
         <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_Web_Registration_URL__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( TEXT( Class_Type__c ) = &quot;FFN&quot;, &quot;https://imaginewa.org/family-friends-and-neighbors-training/&quot;,
+
+IF( TEXT( Class_Type__c ) = &quot;Licensed&quot;, &quot;https://imaginewa.org/licensed-family-child-care-providers-training/&quot;,
+
+IF( TEXT( Class_Type__c ) = &quot;Substitute&quot;, &quot;https://imaginewa.org/become-a-substitute/&quot;,
+
+IF( TEXT( Class_Type__c ) = &quot;Imagine U&quot;, &quot;https://imaginewa.org/imagine-u-mentor-program/&quot;,
+
+IF( TEXT( Class_Type__c ) = &quot;PREPARE&quot;, &quot;https://imaginewa.org/what-we-do/prepare-for-care/&quot;,
+
+IF( TEXT( Class_Type__c ) = &quot;Facility&quot;, &quot;https://imaginewa.org/find-a-substitute/&quot;,
+
+NULL))))))</formula>
+        <label>Web Registration URL</label>
         <required>false</required>
         <type>Text</type>
         <unique>false</unique>

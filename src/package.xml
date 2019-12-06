@@ -7,6 +7,10 @@
         <name>CompactLayout</name>
     </types>
     <types>
+        <members>C501_Guest_Update__c.All</members>
+        <name>ListView</name>
+    </types>
+    <types>
         <members>C501_Guest_Update__c.C501_Contact__c</members>
         <members>C501_Guest_Update__c.C501_Email_Opt_Out_Text__c</members>
         <members>C501_Guest_Update__c.C501_SMS_Opt_Out_Text__c</members>
@@ -14,12 +18,18 @@
         <members>Account.C501_Imagine_WA_County__c</members>
         <members>Account.ii_Email__c</members>
         <members>CCA_Region__c.County__c</members>
+        <members>Campaign.C501_Geolocation__c</members>
+        <members>Campaign.C501_Get_Geolocation__c</members>
+        <members>Campaign.C501_Last_Outreach_Processed__c</members>
+        <members>Campaign.C501_Legacy_Location__c</members>
         <members>Campaign.C501_Outreach_WA_Counties__c</members>
         <members>Campaign.C501_Registration_Link__c</members>
+        <members>Campaign.C501_Training_County__c</members>
         <members>Campaign.C501_Training_Location_Additional__c</members>
         <members>Campaign.C501_Training_Location_Text__c</members>
         <members>Campaign.C501_Training_Location__c</members>
         <members>Campaign.C501_Trigger_Event_Update__c</members>
+        <members>Campaign.C501_Web_Registration_URL__c</members>
         <members>Campaign.City__c</members>
         <members>Campaign.Class_Type__c</members>
         <members>Campaign.Confirmation_Email_Template__c</members>
@@ -45,7 +55,9 @@
         <members>Campaign.custom_Training_Number__c</members>
         <members>Campaign.ii_Days_Until_Class__c</members>
         <members>CampaignMember.C501_Days_Until_Class__c</members>
+        <members>CampaignMember.C501_Miles_From__c</members>
         <members>CampaignMember.C501_Training_Location_Text__c</members>
+        <members>CampaignMember.Email_Opt_Out__c</members>
         <members>CampaignMember.Meal_Provided__c</members>
         <members>CampaignMember.Send_Training_Registered__c</members>
         <members>CampaignMember.Send_Training_Reminder__c</members>
@@ -202,6 +214,10 @@
         <members>npsp__DataImport__c.Contact2_Member_ID__c</members>
         <members>npsp__DataImport__c.Contact2_Middle_Name__c</members>
         <name>CustomField</name>
+    </types>
+    <types>
+        <members>C501_Guest_Update__c</members>
+        <name>CustomTab</name>
     </types>
     <types>
         <members>C501_Class_Notification__c</members>
