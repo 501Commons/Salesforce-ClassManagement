@@ -1259,6 +1259,14 @@ User Id for Substitute Pool</inlineHelpText>
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <listViews>
+        <fullName>AllContacts</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CONTACT.PHONE1</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Contacts</label>
+    </listViews>
     <recordTypes>
         <fullName>Contact</fullName>
         <active>true</active>
