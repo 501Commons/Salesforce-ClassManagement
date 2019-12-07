@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>Account.NPSP_Organization_Account</members>
         <members>Campaign.NPSP_Compact_Layout</members>
         <members>Contact.Compact_Layout_Custom</members>
         <members>ii_Program_Membership__c.Compact_Layout_Custom</members>
@@ -309,9 +310,18 @@
     </types>
     <types>
         <members>Account-Organization Lightning Layout</members>
+        <members>C501_Class_Notification__c-Class Notification Layout</members>
         <members>C501_Guest_Update__c-Guest Update Layout</members>
+        <members>C501_ScheduledFlow__c-C501_ScheduledFlow Layout</members>
+        <members>CCA_Region__c-CCA Region Layout</members>
+        <members>Campaign-Class Layout</members>
+        <members>CampaignMember-Campaign Member Page Layout</members>
         <members>Contact-Contact Lightning Layout</members>
         <members>Contact-Facility Lightning Layout</members>
+        <members>County_Code__c-County Code Layout</members>
+        <members>Event-Event Layout</members>
+        <members>Files__c-File Layout</members>
+        <members>Lead-Lead Layout</members>
         <members>ii_Program_Membership__c-Intern Mentor Program Membership Layout</members>
         <members>ii_Program_Membership__c-Mentor Program Membership Layout</members>
         <members>ii_Program_Membership__c-PREPARE Program Membership Layout</members>
@@ -323,8 +333,16 @@
         <name>Letterhead</name>
     </types>
     <types>
+        <members>Account.Class_Locations</members>
         <members>C501_Guest_Update__c.All</members>
+        <members>Campaign.AllActiveCampaigns</members>
+        <members>Contact.AllContacts</members>
+        <members>Lead.AllOpenLeads</members>
         <name>ListView</name>
+    </types>
+    <types>
+        <members>Class_Management</members>
+        <name>PermissionSet</name>
     </types>
     <types>
         <members>Account.Training_Facility</members>
@@ -404,6 +422,10 @@
         <members>Class_Contacts</members>
         <members>Class_Contacts_And_CampaignHistory</members>
         <name>ReportType</name>
+    </types>
+    <types>
+        <members>Campaign.Send_Reminder</members>
+        <name>WebLink</name>
     </types>
     <types>
         <members>CampaignMember.Denied_Email_Alert</members>
