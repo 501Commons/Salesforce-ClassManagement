@@ -8,6 +8,10 @@
         <name>CompactLayout</name>
     </types>
     <types>
+        <members>Class_Management</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
         <members>Account.C501_Imagine_WA_County__c</members>
         <members>Account.ii_Email__c</members>
         <members>C501_Guest_Update__c.C501_Contact__c</members>
@@ -281,18 +285,16 @@
     <types>
         <members>C501_Delete_Guest_Update_Record</members>
         <members>C501_Guest_Update_Create_FLOW</members>
+        <members>Campaign_OnCreateOrUpdate_ProcessBuilder</members>
         <members>Contact_Create_Edit</members>
         <members>Lead_Convert_Send_Email</members>
         <members>OnCreateProgramMembership</members>
         <members>OnLeadConverted</members>
         <members>Send_Certification_Alert</members>
-        <members>TrainingEventCreated</members>
-        <members>TrainingEventCreatedOrChanged</members>
         <members>Training_Confirmation</members>
         <members>Training_Member_Send_Registered</members>
         <members>Training_Registration</members>
         <members>Training_Reminder</members>
-        <members>testing</members>
         <members>updateInternProgramMembership</members>
         <name>Flow</name>
     </types>
@@ -337,12 +339,17 @@
         <members>C501_Guest_Update__c.All</members>
         <members>Campaign.AllActiveCampaigns</members>
         <members>Contact.AllContacts</members>
+        <members>Event.All_Events</members>
         <members>Lead.AllOpenLeads</members>
         <name>ListView</name>
     </types>
     <types>
         <members>Class_Management</members>
         <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>Class Management Admin</members>
+        <name>Profile</name>
     </types>
     <types>
         <members>Account.Training_Facility</members>

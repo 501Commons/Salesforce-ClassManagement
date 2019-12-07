@@ -790,7 +790,6 @@
             <label>Previously Met - Prev</label>
         </rules>
     </decisions>
-    <description>When Training (Campaign) updated, update Event record and Outreach Counties</description>
     <formulas>
         <processMetadataValues>
             <name>originalFormula</name>
@@ -802,7 +801,7 @@ TEXT([Campaign].Status) &amp;
 &quot;)&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_19_myRule_8_A1_4546981176</name>
+        <name>formula_19_myRule_8_A1_8381580862</name>
         <dataType>String</dataType>
         <expression>&quot;Register: &quot; &amp;
 {!myVariable_current.C501_Registration_Link__c}  &amp;
@@ -817,7 +816,7 @@ TEXT({!myVariable_current.Status}) &amp;
                 <stringValue>[Campaign].Training_Name__c  &amp; &quot; (&quot; &amp; TEXT([Campaign].Class_Type__c) &amp; &quot;) - &quot; &amp;[Campaign].City__c &amp; &quot; - &quot; &amp; TEXT([Campaign].Language__c)</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_20_myRule_8_A1_0983352032</name>
+        <name>formula_20_myRule_8_A1_4538319319</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Training_Name__c}  &amp; &quot; (&quot; &amp; TEXT({!myVariable_current.Class_Type__c}) &amp; &quot;) - &quot; &amp;{!myVariable_current.City__c} &amp; &quot; - &quot; &amp; TEXT({!myVariable_current.Language__c})</expression>
     </formulas>
@@ -871,7 +870,7 @@ TEXT({!myVariable_current.Status}) &amp;
 ) </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A1_6525010749</name>
+        <name>formula_2_myRule_1_A1_2502723501</name>
         <dataType>String</dataType>
         <expression>CASE({!myVariable_current.C501_Training_Location__r.C501_Imagine_WA_County__c} ,
 &quot;Adams&quot;,&quot;Grant; Douglas; Adams; Lincoln; Spokane; Whitman; Franklin; Benton; Walla Walla; Columbia; Garfield; Asotin&quot;,
@@ -929,7 +928,7 @@ TEXT([Campaign].Status) &amp;
 &quot;)&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_5_myRule_4_A1_7151276324</name>
+        <name>formula_5_myRule_4_A1_1530992516</name>
         <dataType>String</dataType>
         <expression>&quot;Register: &quot; &amp;
 {!myVariable_current.C501_Registration_Link__c}  &amp;
@@ -944,7 +943,7 @@ TEXT({!myVariable_current.Status}) &amp;
                 <stringValue>[Campaign].Training_Name__c  &amp; &quot; (&quot; &amp; TEXT([Campaign].Class_Type__c) &amp; &quot;) - &quot; &amp;[Campaign].City__c &amp; &quot; - &quot; &amp; TEXT([Campaign].Language__c)</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_6_myRule_4_A1_9653981022</name>
+        <name>formula_6_myRule_4_A1_1627288777</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Training_Name__c}  &amp; &quot; (&quot; &amp; TEXT({!myVariable_current.Class_Type__c}) &amp; &quot;) - &quot; &amp;{!myVariable_current.City__c} &amp; &quot; - &quot; &amp; TEXT({!myVariable_current.Language__c})</expression>
     </formulas>
@@ -996,8 +995,8 @@ TEXT({!myVariable_current.Status}) &amp;
         <dataType>Boolean</dataType>
         <expression>NOT(ISBLANK( {!myVariable_old.custom_Start_DateTime__c} )) &amp;&amp; NOT(ISBLANK( {!myVariable_old.custom_End_DateTime__c} )) &amp;&amp; OR(ISCHANGED( {!myVariable_old.custom_Start_DateTime__c} ),ISNEW()) &amp;&amp; OR(ISCHANGED( {!myVariable_old.custom_End_DateTime__c} ),ISNEW()) &amp;&amp; OR(ISBLANK(PRIORVALUE( {!myVariable_old.custom_End_DateTime__c} )),ISNEW())</expression>
     </formulas>
-    <interviewLabel>TrainingEventCreatedOrChanged-25_InterviewLabel</interviewLabel>
-    <label>TrainingEventChanged</label>
+    <interviewLabel>Campaign_OnCreateOrUpdate_ProcessBuilder-1_InterviewLabel</interviewLabel>
+    <label>Campaign OnCreateOrUpdate ProcessBuilder</label>
     <processMetadataValues>
         <name>ObjectType</name>
         <value>
@@ -1061,7 +1060,7 @@ TEXT({!myVariable_current.Status}) &amp;
             </processMetadataValues>
             <field>Description</field>
             <value>
-                <elementReference>formula_5_myRule_4_A1_7151276324</elementReference>
+                <elementReference>formula_5_myRule_4_A1_1530992516</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1092,36 +1091,6 @@ TEXT({!myVariable_current.Status}) &amp;
             <field>EndDateTime</field>
             <value>
                 <elementReference>myVariable_current.custom_End_DateTime__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>ID</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>Assigned To ID</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>ID</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>OwnerId</field>
-            <value>
-                <stringValue>0056A000000qHctQAE</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1187,7 +1156,7 @@ TEXT({!myVariable_current.Status}) &amp;
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_6_myRule_4_A1_9653981022</elementReference>
+                <elementReference>formula_6_myRule_4_A1_1627288777</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1306,7 +1275,7 @@ TEXT({!myVariable_current.Status}) &amp;
             </processMetadataValues>
             <field>C501_Outreach_WA_Counties__c</field>
             <value>
-                <elementReference>formula_2_myRule_1_A1_6525010749</elementReference>
+                <elementReference>formula_2_myRule_1_A1_2502723501</elementReference>
             </value>
         </inputAssignments>
         <object>Campaign</object>
@@ -1315,7 +1284,7 @@ TEXT({!myVariable_current.Status}) &amp;
         <processMetadataValues>
             <name>evaluationType</name>
             <value>
-                <stringValue>criteria</stringValue>
+                <stringValue>always</stringValue>
             </value>
         </processMetadataValues>
         <processMetadataValues>
@@ -1340,55 +1309,6 @@ TEXT({!myVariable_current.Status}) &amp;
         <label>Update Event</label>
         <locationX>800</locationX>
         <locationY>200</locationY>
-        <filters>
-            <processMetadataValues>
-                <name>implicit</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>inputDataType</name>
-                <value>
-                    <stringValue>ID</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>Assigned To ID</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideReferenceTo</name>
-                <value>
-                    <stringValue>Calendar;User</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideType</name>
-                <value>
-                    <stringValue>ID</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>operatorDataType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>ID</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>OwnerId</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>0056A000000qHctQAE</stringValue>
-            </value>
-        </filters>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -1435,7 +1355,7 @@ TEXT({!myVariable_current.Status}) &amp;
             </processMetadataValues>
             <field>Description</field>
             <value>
-                <elementReference>formula_19_myRule_8_A1_4546981176</elementReference>
+                <elementReference>formula_19_myRule_8_A1_8381580862</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1543,7 +1463,7 @@ TEXT({!myVariable_current.Status}) &amp;
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_20_myRule_8_A1_0983352032</elementReference>
+                <elementReference>formula_20_myRule_8_A1_4538319319</elementReference>
             </value>
         </inputAssignments>
         <object>Event</object>
