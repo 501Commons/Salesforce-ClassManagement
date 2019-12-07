@@ -60,6 +60,7 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>Contact_Name__c</fullName>
         <description>Text formula field created so the Contact Name can appear in related lists in Lightning Experience and Salesforce1</description>
