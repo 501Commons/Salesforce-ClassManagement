@@ -201,12 +201,6 @@ TEXT({!soContact.C501_Safe_Sleep_Cert_Remaining_Days__c}) + &quot; Day(s) Remain
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>OwnerId</field>
-            <value>
-                <stringValue>0056A000000qgpsQAA</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>StartDateTime</field>
             <value>
                 <elementReference>$Flow.CurrentDateTime</elementReference>
@@ -256,12 +250,6 @@ TEXT({!soContact.C501_Safe_Sleep_Cert_Remaining_Days__c}) + &quot; Day(s) Remain
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>OwnerId</field>
-            <value>
-                <stringValue>0056A000000qgpsQAA</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>StartDateTime</field>
             <value>
                 <elementReference>$Flow.CurrentDateTime</elementReference>
@@ -308,12 +296,6 @@ TEXT({!soContact.C501_Safe_Sleep_Cert_Remaining_Days__c}) + &quot; Day(s) Remain
             <field>EndDateTime</field>
             <value>
                 <elementReference>$Flow.CurrentDateTime</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>OwnerId</field>
-            <value>
-                <stringValue>0056A000000qgpsQAA</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>

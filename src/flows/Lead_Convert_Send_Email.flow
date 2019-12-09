@@ -242,12 +242,6 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>OwnerId</field>
-            <value>
-                <stringValue>0056A000000qgpsQAA</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>StartDateTime</field>
             <value>
                 <elementReference>$Flow.CurrentDateTime</elementReference>
