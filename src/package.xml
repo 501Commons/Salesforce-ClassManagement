@@ -339,7 +339,6 @@
         <members>C501_Guest_Update__c.All</members>
         <members>Campaign.AllActiveCampaigns</members>
         <members>Contact.AllContacts</members>
-        <members>Event.All_Events</members>
         <members>Lead.AllOpenLeads</members>
         <name>ListView</name>
     </types>
