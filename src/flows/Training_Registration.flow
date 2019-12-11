@@ -892,7 +892,7 @@
             <label>Yes</label>
         </rules>
     </decisions>
-    <description>DaveB: Remove Create Event - not supported in Site</description>
+    <description>DaveB: Stars ID validate entry is a number, 16 characters max</description>
     <dynamicChoiceSets>
         <name>Day1Trainings</name>
         <dataType>String</dataType>
@@ -1418,6 +1418,10 @@ IF(ISBLANK({!Training_Day3}), &quot;&quot;, &quot;Day3 Training: &quot; + {!Trai
             <fieldType>InputField</fieldType>
             <helpText>{!constHelpTextPayeeNumber}</helpText>
             <isRequired>false</isRequired>
+            <validationRule>
+                <errorMessage>&lt;p&gt;Value must be a number and 32 digits or less.&lt;/p&gt;</errorMessage>
+                <formulaExpression>AND(LEN({!Training_Payee_Number}) &lt;= 32, ISNUMBER({!Training_Payee_Number}))</formulaExpression>
+            </validationRule>
         </fields>
         <fields>
             <name>Training_STARS_Id</name>
@@ -1425,6 +1429,10 @@ IF(ISBLANK({!Training_Day3}), &quot;&quot;, &quot;Day3 Training: &quot; + {!Trai
             <fieldText>STARS Id</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>false</isRequired>
+            <validationRule>
+                <errorMessage>&lt;p&gt;&lt;span style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255);&quot;&gt;Value must be a number and 32 digits or less.&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                <formulaExpression>AND(LEN({!Training_STARS_Id}) &lt;= 32, ISNUMBER({!Training_STARS_Id}))</formulaExpression>
+            </validationRule>
         </fields>
         <fields>
             <name>Training_Training</name>
@@ -1443,7 +1451,7 @@ IF(ISBLANK({!Training_Day3}), &quot;&quot;, &quot;Day3 Training: &quot; + {!Trai
         </fields>
         <fields>
             <name>Display_Disclaimer2</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;By registering for training and providing your phone number and email, you consent to receive text and email messages from the 501 Commons about 501 Commons services.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;By registering for training and providing your phone number and email, you consent to receive text and email messages from the Imagine Institute about Imagine Institute services.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
@@ -1595,6 +1603,12 @@ IF(ISBLANK({!Training_Day3}), &quot;&quot;, &quot;Day3 Training: &quot; + {!Trai
             <fieldType>InputField</fieldType>
             <helpText>{!constHelpTextPayeeNumber}</helpText>
             <isRequired>false</isRequired>
+            <validationRule>
+                <errorMessage>&lt;p&gt;Value must be a number and 32 digits or less.&lt;/p&gt;</errorMessage>
+                <formulaExpression>LEN({!Facility_Payee_Number}) &lt;= 32 
+&amp;&amp;
+ISNUMBER({!Facility_Payee_Number})</formulaExpression>
+            </validationRule>
         </fields>
         <fields>
             <name>Facility_Training</name>
@@ -1612,7 +1626,7 @@ IF(ISBLANK({!Training_Day3}), &quot;&quot;, &quot;Day3 Training: &quot; + {!Trai
         </fields>
         <fields>
             <name>Display_Disclaimer3</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;By registering for training, and providing your phone number and email, you consent to receive text and email messages from the 501 Commons about 501 Commons services.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;By registering for training, and providing your phone number and email, you consent to receive text and email messages from the Imagine Institute about Imagine Institute services.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
@@ -1628,7 +1642,7 @@ IF(ISBLANK({!Training_Day3}), &quot;&quot;, &quot;Day3 Training: &quot; + {!Trai
         <allowPause>false</allowPause>
         <fields>
             <name>PersonalInfo_Summary_0</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(0, 0, 0);&quot;&gt;Registration application received.  An Imagine Administrator will review the request and will send an email reply.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(0, 0, 0);&quot;&gt;By registering for training, and providing your phone number and email, you consent to receive text and email messages from the 501 Commons about 501 Commons services.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(0, 0, 0);&quot;&gt;﻿{!soLead.FirstName}, {!soLead.LastName}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(0, 0, 0);&quot;&gt;{!soLead.Email}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(0, 0, 0);&quot;&gt;{!getTrainingSummary}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(0, 0, 0);&quot;&gt;Registration application received.  An Imagine Administrator will review the request and will send an email reply.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(0, 0, 0);&quot;&gt;By registering for training, and providing your phone number and email, you consent to receive text and email messages from the Imagine Institute about Imagine Institute services.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(0, 0, 0);&quot;&gt;﻿{!soLead.FirstName}, {!soLead.LastName}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(0, 0, 0);&quot;&gt;{!soLead.Email}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(0, 0, 0);&quot;&gt;{!getTrainingSummary}&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
@@ -1705,6 +1719,11 @@ IF(ISBLANK({!Training_Day3}), &quot;&quot;, &quot;Day3 Training: &quot; + {!Trai
             <fieldType>InputField</fieldType>
             <helpText>{!constHelpTextPayeeNumber}</helpText>
             <isRequired>false</isRequired>
+            <validationRule>
+                <errorMessage>&lt;p&gt;Value must be a number and 32 digits or less.&lt;/p&gt;</errorMessage>
+                <formulaExpression>LEN({!Substitute_STARS_Id}) &lt;= 32 &amp;&amp;
+ISNUMBER({!Substitute_STARS_Id})</formulaExpression>
+            </validationRule>
         </fields>
         <fields>
             <name>Substitute_Training</name>
@@ -1723,7 +1742,7 @@ IF(ISBLANK({!Training_Day3}), &quot;&quot;, &quot;Day3 Training: &quot; + {!Trai
         </fields>
         <fields>
             <name>Display_Disclaimer1</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;By Registering for training, and providing your phone number and email, you consent to receive text and email messages from the 501 Commons about 501 Commons services.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;By Registering for training, and providing your phone number and email, you consent to receive text and email messages from the Imagine Institute about Imagine Institute services.&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>

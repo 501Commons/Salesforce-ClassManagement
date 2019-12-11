@@ -16,7 +16,7 @@
         <fullName>Payee_Number__c</fullName>
         <externalId>false</externalId>
         <label>SSPS/Payee Number</label>
-        <length>16</length>
+        <length>32</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Text</type>
@@ -49,7 +49,7 @@
         <fullName>ii_STARS_Id__c</fullName>
         <externalId>false</externalId>
         <label>STARS Id</label>
-        <length>16</length>
+        <length>32</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Text</type>
