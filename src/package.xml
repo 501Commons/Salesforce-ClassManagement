@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Class Management</fullName>
     <types>
         <members>Account.NPSP_Organization_Account</members>
         <members>Campaign.NPSP_Compact_Layout</members>
@@ -8,17 +9,48 @@
         <name>CompactLayout</name>
     </types>
     <types>
+        <members>classroom</members>
+        <name>ContentAsset</name>
+    </types>
+    <types>
         <members>Class_Management</members>
         <name>CustomApplication</name>
     </types>
     <types>
         <members>Account.C501_Imagine_WA_County__c</members>
         <members>Account.ii_Email__c</members>
+        <members>C501_Class_Notification__c.Confirmation_Email_Template__c</members>
+        <members>C501_Class_Notification__c.Contact_Record_Type_Id__c</members>
+        <members>C501_Class_Notification__c.Contact_Record_Type__c</members>
+        <members>C501_Class_Notification__c.Reminder_Email_Template__c</members>
+        <members>C501_Class_Notification__c.Training__c</members>
         <members>C501_Guest_Update__c.C501_Contact__c</members>
         <members>C501_Guest_Update__c.C501_Email_Opt_Out_Text__c</members>
         <members>C501_Guest_Update__c.C501_SMS_Opt_Out_Text__c</members>
         <members>C501_Guest_Update__c.Languages__c</members>
+        <members>C501_ScheduledFlow__c.Campaign__c</members>
+        <members>C501_ScheduledFlow__c.FireFlow__c</members>
+        <members>C501_ScheduledFlow__c.Status__c</members>
         <members>CCA_Region__c.County__c</members>
+        <members>CampaignMember.C501_Days_Until_Class__c</members>
+        <members>CampaignMember.C501_Miles_From__c</members>
+        <members>CampaignMember.C501_Training_Location_Text__c</members>
+        <members>CampaignMember.Email_Opt_Out__c</members>
+        <members>CampaignMember.Meal_Provided__c</members>
+        <members>CampaignMember.Send_Training_Registered__c</members>
+        <members>CampaignMember.Send_Training_Reminder__c</members>
+        <members>CampaignMember.Training_End_DateTime__c</members>
+        <members>CampaignMember.Training_Full_Name__c</members>
+        <members>CampaignMember.Training_Incentive__c</members>
+        <members>CampaignMember.Training_Internal_Id__c</members>
+        <members>CampaignMember.Training_Location_Other__c</members>
+        <members>CampaignMember.Training_Location__c</members>
+        <members>CampaignMember.Training_Name__c</members>
+        <members>CampaignMember.Training_Start_DateTime__c</members>
+        <members>CampaignMember.Training_Status__c</members>
+        <members>CampaignMember.custom_Attended__c</members>
+        <members>CampaignMember.custom_Campaign_Member_Number__c</members>
+        <members>CampaignMember.custom_Member_ID__c</members>
         <members>Campaign.C501_Geolocation__c</members>
         <members>Campaign.C501_Get_Geolocation__c</members>
         <members>Campaign.C501_Last_Outreach_Processed__c</members>
@@ -42,6 +74,7 @@
         <members>Campaign.Location__c</members>
         <members>Campaign.Meal_Provided__c</members>
         <members>Campaign.Reminder_Email_Template__c</members>
+        <members>Campaign.Status</members>
         <members>Campaign.Trainer__c</members>
         <members>Campaign.Training_Active__c</members>
         <members>Campaign.Training_Full_Name__c</members>
@@ -55,25 +88,6 @@
         <members>Campaign.custom_Start_DateTime__c</members>
         <members>Campaign.custom_Training_Number__c</members>
         <members>Campaign.ii_Days_Until_Class__c</members>
-        <members>CampaignMember.C501_Days_Until_Class__c</members>
-        <members>CampaignMember.C501_Miles_From__c</members>
-        <members>CampaignMember.C501_Training_Location_Text__c</members>
-        <members>CampaignMember.Email_Opt_Out__c</members>
-        <members>CampaignMember.Meal_Provided__c</members>
-        <members>CampaignMember.Send_Training_Registered__c</members>
-        <members>CampaignMember.Send_Training_Reminder__c</members>
-        <members>CampaignMember.Training_End_DateTime__c</members>
-        <members>CampaignMember.Training_Full_Name__c</members>
-        <members>CampaignMember.Training_Incentive__c</members>
-        <members>CampaignMember.Training_Internal_Id__c</members>
-        <members>CampaignMember.Training_Location_Other__c</members>
-        <members>CampaignMember.Training_Location__c</members>
-        <members>CampaignMember.Training_Name__c</members>
-        <members>CampaignMember.Training_Start_DateTime__c</members>
-        <members>CampaignMember.Training_Status__c</members>
-        <members>CampaignMember.custom_Attended__c</members>
-        <members>CampaignMember.custom_Campaign_Member_Number__c</members>
-        <members>CampaignMember.custom_Member_ID__c</members>
         <members>Contact.C501_BloodBorneP_Training_Completed__c</members>
         <members>Contact.C501_Certs_Expiring_Message__c</members>
         <members>Contact.C501_Clean_Both_Mobile_Numbers__c</members>
@@ -139,7 +153,6 @@
         <members>Contact.ii_Hiv_Cert_Status__c</members>
         <members>Contact.ii_Initial_Training_Req_Completed_Year__c</members>
         <members>Contact.ii_Initial_Training_Requirement__c</members>
-        <members>Contact.Languages__c</members>
         <members>Contact.ii_License_Number__c</members>
         <members>Contact.ii_License_Status__c</members>
         <members>Contact.ii_Licensed__c</members>
@@ -173,6 +186,7 @@
         <members>Contact.ii_Tb_Cert_Status__c</members>
         <members>Contact.ii_Unit_Status__c</members>
         <members>Contact.ii_Username__c</members>
+        <members>County_Code__c.Country_Code_Id__c</members>
         <members>Imagine_Settings__c.Communication_Preference_URL__c</members>
         <members>Imagine_Settings__c.Email_Opt_In_Reply__c</members>
         <members>Imagine_Settings__c.Email_Opt_Out_Reply__c</members>
@@ -194,6 +208,8 @@
         <members>TwilioConfig__c.fromNumber__c</members>
         <members>TwilioConfig__c.messServiceId__c</members>
         <members>ii_Program_Membership__c.Cohort__c</members>
+        <members>ii_Program_Membership__c.Email__c</members>
+        <members>ii_Program_Membership__c.Exit_Date__c</members>
         <members>ii_Program_Membership__c.Fiscal_Year__c</members>
         <members>ii_Program_Membership__c.Intern_Report__c</members>
         <members>ii_Program_Membership__c.Intern_Status__c</members>
@@ -202,10 +218,11 @@
         <members>ii_Program_Membership__c.Mentor_Report__c</members>
         <members>ii_Program_Membership__c.Mentor_Status__c</members>
         <members>ii_Program_Membership__c.Mentor__c</members>
+        <members>ii_Program_Membership__c.Mobile_Phone__c</members>
         <members>ii_Program_Membership__c.Participant_Type__c</members>
         <members>ii_Program_Membership__c.Program_Name__c</members>
+        <members>ii_Program_Membership__c.Stars_Id__c</members>
         <members>ii_Program_Membership__c.State_Approved_Mentor__c</members>
-        <members>npe5__Affiliation__c.Contact_Name__c</members>
         <name>CustomField</name>
     </types>
     <types>
@@ -218,7 +235,6 @@
         <members>Imagine_Settings__c</members>
         <members>TwilioConfig__c</members>
         <members>ii_Program_Membership__c</members>
-        <members>npe5__Affiliation__c</members>
         <name>CustomObject</name>
     </types>
     <types>
@@ -267,9 +283,11 @@
         <members>SubPool/Substitute_Confirmation_Spanish</members>
         <members>SubPool/Substitute_Pool_Reminder_English</members>
         <members>SubPool/Substitute_Pool_Reminder_Spanish</members>
+        <members>GW_Volunteers__Voluntarios_Espa_oles/II_FFN_Training_Registration_Template</members>
         <name>EmailTemplate</name>
     </types>
     <types>
+        <members>Class_Management_UtilityBar</members>
         <members>Program_Membership</members>
         <name>FlexiPage</name>
     </types>
@@ -291,8 +309,8 @@
         <members>C501_Guest_Update__c-Guest Update Layout</members>
         <members>C501_ScheduledFlow__c-C501_ScheduledFlow Layout</members>
         <members>CCA_Region__c-CCA Region Layout</members>
-        <members>Campaign-Class Layout</members>
         <members>CampaignMember-Campaign Member Page Layout</members>
+        <members>Campaign-Class Layout</members>
         <members>Contact-Contact Lightning Layout</members>
         <members>Contact-Facility Lightning Layout</members>
         <members>County_Code__c-County Code Layout</members>

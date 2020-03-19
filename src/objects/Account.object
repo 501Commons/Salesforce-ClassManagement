@@ -403,24 +403,5 @@
                 <default>false</default>
             </values>
         </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Corporate</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Foundation</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Government</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Nonprofit</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
     </recordTypes>
 </CustomObject>

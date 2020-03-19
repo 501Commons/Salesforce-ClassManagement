@@ -280,6 +280,10 @@ NULL))))))</formula>
         </valueSet>
     </fields>
     <fields>
+        <fullName>Status</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
         <fullName>Trainer__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>

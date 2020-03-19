@@ -61,10 +61,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Languages__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>ii_Age__c</field>
             </layoutItems>
             <layoutItems>
