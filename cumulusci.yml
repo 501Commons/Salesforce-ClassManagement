@@ -3,7 +3,7 @@ project:
     name: Salesforce-ClassManagement
     package:
         name:  Class Management
-        namespace: c501cm
+        namespace: c501_cm
         api_version: '48.0'
 
 orgs:

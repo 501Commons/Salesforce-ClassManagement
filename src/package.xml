@@ -283,7 +283,6 @@
         <members>SubPool/Substitute_Confirmation_Spanish</members>
         <members>SubPool/Substitute_Pool_Reminder_English</members>
         <members>SubPool/Substitute_Pool_Reminder_Spanish</members>
-        <members>GW_Volunteers__Voluntarios_Espa_oles/II_FFN_Training_Registration_Template</members>
         <name>EmailTemplate</name>
     </types>
     <types>
@@ -353,5 +352,5 @@
         <members>Campaign.Send_Reminder</members>
         <name>WebLink</name>
     </types>
-    <version>45.0</version>
+    <version>48.0</version>
 </Package>
