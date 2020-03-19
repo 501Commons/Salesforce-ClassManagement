@@ -1567,10 +1567,6 @@ NULL))))))</formula>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Full</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>In Progress</fullName>
                 <default>false</default>
             </values>
@@ -1625,15 +1621,7 @@ NULL))))))</formula>
         <picklistValues>
             <picklist>Type</picklist>
             <values>
-                <fullName>Conference</fullName>
-                <default>true</default>
-            </values>
-            <values>
                 <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Webinar</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

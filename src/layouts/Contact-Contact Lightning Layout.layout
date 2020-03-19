@@ -45,7 +45,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>ii_Languages__c</field>
+                <field>Languages__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

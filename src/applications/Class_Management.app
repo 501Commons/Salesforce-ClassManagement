@@ -2,8 +2,6 @@
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
     <brand>
         <headerColor>#0070D2</headerColor>
-        <logo>classmanagement</logo>
-        <logoVersion>1</logoVersion>
         <shouldOverrideOrgTheme>true</shouldOverrideOrgTheme>
     </brand>
     <description>Class Management for posting classes and managing the process to register, notify, outreach, and report.</description>
@@ -23,5 +21,4 @@
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
     <uiType>Lightning</uiType>
-    <utilityBar>Class_Management_UtilityBar</utilityBar>
 </CustomApplication>

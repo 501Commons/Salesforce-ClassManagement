@@ -792,7 +792,7 @@ SUBSTITUTE( MobilePhone , &quot;(&quot;, &quot;&quot;), &quot;)&quot;, &quot;&qu
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>ii_Languages__c</fullName>
+        <fullName>Languages__c</fullName>
         <externalId>false</externalId>
         <label>Languages</label>
         <required>false</required>
@@ -1550,7 +1550,7 @@ User Id for Substitute Pool</inlineHelpText>
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>ii_Languages__c</picklist>
+            <picklist>Languages__c</picklist>
             <values>
                 <fullName>Afrikanns</fullName>
                 <default>false</default>
@@ -2786,7 +2786,7 @@ User Id for Substitute Pool</inlineHelpText>
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>ii_Languages__c</picklist>
+            <picklist>Languages__c</picklist>
             <values>
                 <fullName>Afrikanns</fullName>
                 <default>false</default>
